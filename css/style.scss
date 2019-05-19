@@ -1,0 +1,129 @@
+$text-color: #fff;
+$bg-color: #000;
+$bg-color-logo: #464646;
+$text-color-hover: #9c91ff;
+$title: #000;
+$text-article: #000;
+$article-shadow: rgba(0,0,0,.2);
+$article-shadow-hover: rgba(0,0,0,.4);
+$bg-article: #f0f0f0;
+$bg-article-hover: #f7f7f7;
+
+header {
+    height: auto;
+    background: $bg-color;
+    background-size: cover;
+    nav {
+        display: flex;
+        justify-content: space-around;
+        padding: 1em;
+
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+    
+        a {
+            position: relative;
+            display: inline-block;
+            padding: 0 3em;
+            text-decoration: none;
+            color: $text-color;
+            &:hover {
+                color: $text-color-hover;
+            }
+        } 
+    }
+}
+
+main {
+    header {
+        height: auto;
+        background: $bg-color-logo;
+        background-size: cover;
+        padding: 1em;
+    }
+
+    section {
+        article {
+            background-color: $bg-article;
+            padding: 0.5em;
+            margin: 0.5em;
+            box-shadow: 0.5px 0.5px 1px $article-shadow;
+
+            h1 {
+                color: $title;
+            }
+            p {
+                color: $text-article;
+            }
+
+            &:hover {
+                box-shadow: 1.5px 1.5px 3px $article-shadow-hover;
+                background-color: $bg-article-hover;
+            }
+        } 
+    }
+}
+
+footer {
+    color: $text-color;
+    div{
+        background-color: $bg-color-logo;
+        margin-top: 1em;
+    }
+
+    .center {
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    footer {
+        height: auto;
+        background-color: $bg-color;
+        background-size: cover;
+        p {
+            display: flex;
+            justify-content: space-around;
+            padding: 1em;       
+        }
+    }    
+}
+
+
+@media all and (max-width: 767px) {
+    ul {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        
+        li {
+            padding: 0.5em;
+        }
+    }
+
+    main {
+        header {
+            div {
+                display: flex;
+                justify-content: center;
+            }
+            .input-group {
+                padding: 1.5em 0;
+            }
+        }
+    }
+    
+    footer {
+        div {
+            display: flex;
+            justify-content: space-around;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+}
